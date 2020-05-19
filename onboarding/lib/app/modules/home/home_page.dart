@@ -31,6 +31,21 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
               ],
             ),
           ),
+          child: SafeArea(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Container(
+                  alignment: Alignment.centerRight,
+                  child: FlatButton(
+                      onPressed: () => print("Hello World"),
+                      child: Text('Skip',
+                          style:
+                              TextStyle(color: Colors.white, fontSize: 20.0))),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
