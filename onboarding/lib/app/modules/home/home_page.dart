@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:onboarding/app/modules/home/onboard_page_view_widget.dart';
 import 'package:onboarding/app/modules/home/styles.dart';
 import 'home_controller.dart';
 
@@ -59,90 +60,36 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                       });
                     },
                     children: <Widget>[
-                      Padding(
-                        padding: EdgeInsets.all(40.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Center(
-                              child: Image(
-                                image:
-                                    AssetImage('assets/images/onboarding0.png'),
-                                height: 300.0,
-                                width: 300.0,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 30.0,
-                            ),
-                            Text(
-                              'Connect people\naround the world',
-                              style: kTitleStyle,
-                            ),
-                            SizedBox(height: 15.0),
-                            Text(
-                              'Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque pharetra.',
-                              style: kSubtitleStyle,
-                            )
-                          ],
+                      OnBoardPageViewWidget(
+                        title: 'Connect people\naround the world',
+                        description:
+                            'Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque pharetra.',
+                        image: Image(
+                          image: AssetImage('assets/images/onboarding0.png'),
+                          height: 300.0,
+                          width: 300.0,
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsets.all(40.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Center(
-                              child: Image(
-                                image:
-                                    AssetImage('assets/images/onboarding1.png'),
-                                height: 300.0,
-                                width: 300.0,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 30.0,
-                            ),
-                            Text(
-                              'Live your life smarter with us!',
-                              style: kTitleStyle,
-                            ),
-                            SizedBox(height: 15.0),
-                            Text(
-                              'Sapien metus, scelerisque nec and pharetra id, tempor a tortor. Pellentesque non dignissim neque.',
-                              style: kSubtitleStyle,
-                            )
-                          ],
+                      OnBoardPageViewWidget(
+                        title: 'Live your lite smarter with us!',
+                        description:
+                            'Sapien metus, scelerisque nec and pharetra id, tempor a tortor. Pellentesque non dignissim neque.',
+                        image: Image(
+                          image: AssetImage('assets/images/onboarding1.png'),
+                          height: 300.0,
+                          width: 300.0,
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsets.all(40.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Center(
-                              child: Image(
-                                image:
-                                    AssetImage('assets/images/onboarding2.png'),
-                                height: 300.0,
-                                width: 300.0,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 30.0,
-                            ),
-                            Text(
-                              'Get a new experience of imagination',
-                              style: kTitleStyle,
-                            ),
-                            SizedBox(height: 15.0),
-                            Text(
-                              'Donec facilisis tortor ut augue lacinia, at viverra est semper.',
-                              style: kSubtitleStyle,
-                            )
-                          ],
+                      OnBoardPageViewWidget(
+                        title: 'Get a new experience of imagination',
+                        description:
+                            'Donec facilisis tortor ut augue lacinia, at viverra est semper.',
+                        image: Image(
+                          image: AssetImage('assets/images/onboarding2.png'),
+                          height: 300.0,
+                          width: 300.0,
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
